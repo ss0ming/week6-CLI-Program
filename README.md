@@ -12,7 +12,8 @@ CLI 프로그램 제작하기
 
 ### 클래스 설계도 다이어그램
 
-![menu_uml](https://github.com/ss0ming/week6-CLI-Program/assets/104823900/0ab2adee-772c-4fa9-864d-35717c660b9a)
+![image](https://github.com/ss0ming/week6-CLI-program/assets/104823900/ee0938ad-c09f-4a44-a2c5-b6bb4d07698d)
+
 
 ### 기능 목록
 #### 메뉴판 출력 기능
