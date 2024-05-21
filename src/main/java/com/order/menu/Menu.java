@@ -1,15 +1,13 @@
 package com.order.menu;
 
-public class Menu {
+public abstract class Menu {
 
     private final String name;
     private final int price;
-    private final String category;
 
-    public Menu(String name, int price, String category) {
+    public Menu(String name, int price) {
         this.name = name;
         this.price = price;
-        this.category = category;
     }
 
     public String getName() {
@@ -20,9 +18,7 @@ public class Menu {
         return price;
     }
 
-    public String getCategory() {
-        return category;
-    }
+    public abstract String getCategory();
 
     public void printInfo() {
         String info = String.format("%-20s%10d원", name, price);
