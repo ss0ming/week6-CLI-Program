@@ -9,6 +9,9 @@ import java.util.Scanner;
 
 public class InputView {
     public static Map<Menu, Integer> inputOrder(List<Menu> menus) {
+        System.out.println("주문할 메뉴의 이름과 수량을 입력해주세요.");
+        System.out.println("메뉴 한 줄씩 입력해주시고 주문이 끝나면 0을 입력해주세요. 예시) 크림 파스타 2");
+
         Scanner sc = new Scanner(System.in);
         Map<Menu, Integer> orders = new LinkedHashMap<>();
 
@@ -17,6 +20,7 @@ public class InputView {
             String input = sc.nextLine();
 
             if (input.equals("0")) {
+                System.out.println();
                 break;
             }
 
@@ -40,6 +44,15 @@ public class InputView {
 
         return orders;
     }
+
+    public static String inputNum() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("번호 입력: ");
+        String num = sc.next();
+        System.out.println();
+
+        return num;
+}
 
     public static boolean checkInput(String input, int index) {
         if (index == -1 || index == input.length() - 1) {
