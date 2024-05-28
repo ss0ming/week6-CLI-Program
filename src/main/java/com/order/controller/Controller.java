@@ -19,30 +19,30 @@ public class Controller {
     }
 
     public static void order(Customer customer) {
-
-
-        label:
-        while (true) {
+        boolean running = true;
+        while (running) {
             OutputView.printMainOption();
-            String num = InputView.inputNum();
+            int num = InputView.inputNum();
+            System.out.println();
 
             switch (num) {
-                case "1":
+                case 1:
                     customer.order(InputView.inputOrder(menuBoard.getMenus()));
                     break;
-                case "2":
+                case 2:
                     customer.showOrders();
                     break;
-                case "3":
+                case 3:
                     customer.cancelOrder();
                     break;
-                case "4":
+                case 4:
                     Receipt receipt = new Receipt(customer.getOrders());
                     receipt.showReceipt(); // 영수증 출력
-
-                    break label;
-                case "5":
+                    running = false;
+                    break;
+                case 5:
                     System.out.println("주문 프로그램을 종료합니다.");
+                    running = false;
                     break;
                 default:
                     System.out.println("잘못된 입력입니다.");
