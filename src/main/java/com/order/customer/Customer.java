@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class Customer {
 
-    private Map<Menu, Integer> orders ;
+    private Map<Menu, Integer> orders;
 
     public Customer() {
         this.orders = new LinkedHashMap<>();
@@ -16,10 +16,6 @@ public class Customer {
 
     public void order(Map<Menu, Integer> orders) {
         this.orders = orders;
-    }
-
-    public void showOrders() {
-        OutputView.printOrders(orders);
     }
 
     public void cancelOrder() {

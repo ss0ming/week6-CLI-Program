@@ -1,19 +1,20 @@
-package com.order.receipt;
+package com.order.customer;
 
 import com.order.menu.Menu;
 import com.order.view.OutputView;
 
 import java.util.Map;
 
-public class Receipt {
+public class Cart {
 
     private final Map<Menu, Integer> orders;
 
-    public Receipt(Map<Menu, Integer> orders) {
+    public Cart(Map<Menu, Integer> orders) {
         this.orders = orders;
     }
 
-    public void showReceipt() {
-        OutputView.printReceipt(orders);
+    public void showOrders() {
+        OutputView.printOrders(orders);
     }
+
 }

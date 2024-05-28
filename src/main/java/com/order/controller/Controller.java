@@ -1,8 +1,9 @@
 package com.order.controller;
 
+import com.order.customer.Cart;
 import com.order.customer.Customer;
 import com.order.menu.*;
-import com.order.receipt.Receipt;
+import com.order.kiosk.CardReader;
 import com.order.view.InputView;
 import com.order.view.OutputView;
 
@@ -30,13 +31,14 @@ public class Controller {
                     customer.order(InputView.inputOrder(menuBoard.getMenus()));
                     break;
                 case 2:
-                    customer.showOrders();
+                    Cart cart = new Cart(customer.getOrders());
+                    cart.showOrders();
                     break;
                 case 3:
                     customer.cancelOrder();
                     break;
                 case 4:
-                    Receipt receipt = new Receipt(customer.getOrders());
+                    CardReader receipt = new CardReader(customer.getOrders());
                     receipt.showReceipt(); // 영수증 출력
                     running = false;
                     break;
