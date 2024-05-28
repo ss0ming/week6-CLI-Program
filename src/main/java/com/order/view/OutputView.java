@@ -30,14 +30,14 @@ public class OutputView {
     }
 
     public static void printReceipt(Map<Menu, Integer> orders) {
+        int total = 0;
+
         System.out.println("============= Receipt =============");
 
         if (orders.isEmpty()) {
             System.out.println("주문 내역이 없습니다.\n");
             return;
         }
-
-        int total = 0;
 
         for (Menu order : orders.keySet()) {
             int price = order.getPrice();
