@@ -11,6 +11,16 @@ public class Steak extends MainDish {
         this.sauce = sauce;
     }
 
+    public int calculateCookingTime() {
+        int baseTime = 25;
+
+        if (doneness.equals("well-done")) {
+            baseTime += 10;
+        }
+
+        return baseTime;
+    }
+
     public String getDoneness() {
         return doneness;
     }

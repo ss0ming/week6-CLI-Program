@@ -9,6 +9,16 @@ public class Pasta extends MainDish {
         this.type = type;
     }
 
+    public int calculateCookingTime() {
+        int baseTime = 15;
+
+        if (type.equals("cream")) {
+            baseTime += 5;
+        }
+
+        return baseTime;
+    }
+
     public String getType() {
         return type;
     }
